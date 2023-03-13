@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+.quiz {
+  margin: 20px auto;
+  width: 800px;
+  padding: 15px;
+  background-color: #f8f8f8;
+}
+.quiz-info {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-weight: bold;
+}
+.question {
+  background-color: white;
+  padding: 20px;
+  margin-top: 0px;
+}
+.question h2 {
+  margin: 0;
+}
+.answers {
+  background-color: white;
+  
+}
+.answer {
+  padding: 20px;
+  color: #aaa;
+}
+.answer:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+.answer input[type="Radio"]:checked + label {
+  color: #0075ff;
+}
+label {
+  cursor: pointer;
+  font-weight: bold;
+}
+.submit {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #0075ff;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spans span {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 5px;
+}
+.spans span.active {
+  background-color: #0075ff;
+}
+.popup-container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 600px;
+  height: 400px;
+}
+.overlay{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  
+}
+.grade{
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.mark{
+  font-size: 20px;
+  font-weight: bold;
+}
+.popup-show {
+  transform: translate(-50%, -50%) scale(1) ; 
+}
+.count-down{
+  font-weight: 600;
+  font-size: 18px;
+}
